@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Georama:wght@400;600&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Georama", sans-serif;
+  font-weight: 600;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+button:active {
+  transform: scale(0.96);
+  outline: none;
+}
+
+.calculator-grid-container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid-container > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid rgba(38, 146, 218, 0.5);
+  outline: none;
+  background: #2c394b;
+  color: white;
+}
+
+.calculator-grid-container > button:hover {
+  background: #334756;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
+
+#equal {
+  background: #ff4c29;
+  border-bottom-right-radius: 5px;
+}
+
+#equal:hover {
+  filter: brightness(70%);
+}
+
+#all-clear {
+  background: #ff2626;
+}
+
+#all-clear:hover {
+  filter: brightness(70%);
+}
+
+#delete {
+  background: #346751;
+}
+
+#delete:hover {
+  filter: brightness(70%);
+}
+
+#period {
+  border-bottom-left-radius: 5px;
+}
